@@ -16,8 +16,8 @@ const Hero = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             
             {/* Left side - Profile and main info */}
-            <div className="text-center lg:text-left animate-fade-in">
-              <div className="flex flex-col items-center lg:items-start">
+            <div className="text-center animate-fade-in">
+              <div className="flex flex-col items-center">
                 {/* Profile Image */}
                 <div className="relative mb-8">
                   <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur opacity-75 animate-pulse"></div>
@@ -44,7 +44,7 @@ const Hero = () => {
                 </div>
 
                 {/* Quick contact info */}
-                <div className="flex flex-col gap-3 text-sm text-gray-300">
+                <div className="flex flex-col gap-3 text-sm text-gray-300 max-w-xs">
                   <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/20">
                     <MapPin className="w-4 h-4 text-purple-400" />
                     <span>Disponible para oportunidades</span>
