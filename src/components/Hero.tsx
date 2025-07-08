@@ -17,29 +17,42 @@ const Hero = () => {
             
             {/* Left side - Profile and main info */}
             <div className="text-center lg:text-left animate-fade-in">
-              <div className="mb-8">
-                <img 
-                  src="/lovable-uploads/237eebb4-ad5e-4493-b350-a063e7aa13d5.png" 
-                  alt="Leonardo Cabrera"
-                  className="w-48 h-48 lg:w-64 lg:h-64 rounded-full mx-auto lg:mx-0 mb-6 border-4 border-white/20 shadow-2xl object-cover animate-scale-in"
-                />
-              </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-                LEONARDO CABRERA
-              </h1>
-              <p className="text-xl md:text-2xl lg:text-3xl text-purple-200 mb-6 font-light tracking-wide">
-                MAESTRO ESPECIALIZADO
-              </p>
-              
-              {/* Quick contact info */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6 text-sm text-gray-300">
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4" />
-                  <span>Disponible para oportunidades</span>
+              <div className="flex flex-col items-center lg:items-start">
+                {/* Profile Image */}
+                <div className="relative mb-8">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur opacity-75 animate-pulse"></div>
+                  <img 
+                    src="/lovable-uploads/237eebb4-ad5e-4493-b350-a063e7aa13d5.png" 
+                    alt="Leonardo Cabrera"
+                    className="relative w-56 h-56 rounded-2xl object-cover shadow-2xl border-4 border-white/20 animate-scale-in"
+                  />
+                  <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg">
+                    <span className="text-2xl">👨‍🏫</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" />
-                  <span>Contacto profesional</span>
+
+                {/* Name and Title */}
+                <div className="space-y-4 mb-6">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent leading-tight">
+                    LEONARDO<br />CABRERA
+                  </h1>
+                  <div className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-full px-6 py-2 inline-block">
+                    <p className="text-lg font-semibold text-white">
+                      MAESTRO ESPECIALIZADO
+                    </p>
+                  </div>
+                </div>
+
+                {/* Quick contact info */}
+                <div className="flex flex-col gap-3 text-sm text-gray-300">
+                  <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/20">
+                    <MapPin className="w-4 h-4 text-purple-400" />
+                    <span>Disponible para oportunidades</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/20">
+                    <Mail className="w-4 h-4 text-blue-400" />
+                    <span>Contacto profesional</span>
+                  </div>
                 </div>
               </div>
             </div>
