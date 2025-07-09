@@ -15,9 +15,9 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
+    <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100 w-full">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Otros Conocimientos */}
             <div className="bg-white p-8 rounded-2xl shadow-lg">
