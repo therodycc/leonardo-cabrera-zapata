@@ -3,6 +3,13 @@ import { ChevronDown, MapPin, Mail, Phone } from "lucide-react";
 import Navigation from "./Navigation";
 
 const Hero = () => {
+  const scrollToContact = () => {
+    const element = document.querySelector('#contact');
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section 
       id="hero" 
@@ -24,7 +31,7 @@ const Hero = () => {
       <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-32 right-16 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
       
-      <div className="flex-1 flex items-center justify-center">
+      <div className="flex-1 flex items-center justify-center pt-16">
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -37,7 +44,7 @@ const Hero = () => {
                     <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl blur opacity-75 animate-pulse"></div>
                     <div className="relative">
                       <img 
-                        src="/lovable-uploads/8a7cb0b2-739b-4a44-a1e9-852bd9c53982.png" 
+                        src="/lovable-uploads/09425ff6-8efb-4c4f-833a-cd3f0eb18955.png" 
                         alt="Leonardo Cabrera"
                         className="relative w-96 h-96 rounded-3xl object-cover shadow-2xl border-4 border-white/20 animate-scale-in"
                       />
@@ -70,10 +77,13 @@ const Hero = () => {
                       <MapPin className="w-4 h-4 text-purple-400" />
                       <span>Disponible para oportunidades</span>
                     </div>
-                    <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/20">
+                    <button 
+                      onClick={scrollToContact}
+                      className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-white/20 hover:bg-white/20 transition-colors cursor-pointer"
+                    >
                       <Mail className="w-4 h-4 text-blue-400" />
                       <span>Contacto profesional</span>
-                    </div>
+                    </button>
                   </div>
                 </div>
               </div>

@@ -7,22 +7,26 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Inicio", href: "#hero" },
-    { name: "Sobre Mí", href: "#about" },
+    { name: "Mi Filosofía", href: "#about" },
     { name: "Trayectoria", href: "#career" },
     { name: "Habilidades", href: "#skills" },
     { name: "Contacto", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (href === "#hero") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
     setIsOpen(false);
   };
 
   return (
-    <nav className="w-full z-50 bg-black/20 backdrop-blur-sm border-b border-white/10">
+    <nav className="fixed top-0 w-full z-50 bg-black/30 backdrop-blur-sm border-b border-white/10">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

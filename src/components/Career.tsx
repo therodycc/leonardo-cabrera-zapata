@@ -9,6 +9,11 @@ const Career = () => {
       year: "Actual"
     },
     {
+      degree: "Especialidad en E. Ambiental, UNPHU",
+      status: "(Cursando)",
+      year: "Actual"
+    },
+    {
       degree: "Licenciatura en Educación, Mención Ciencias Sociales",
       institution: "Universidad Dominicana O&M",
       year: "2020"
