@@ -3,7 +3,7 @@ import { ChevronDown, MapPin, Mail, Phone } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden pt-16">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black/20"></div>
       
@@ -16,27 +16,34 @@ const Hero = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             
             {/* Left side - Profile and main info */}
-            <div className="text-center animate-fade-in">
-              <div className="flex flex-col items-center">
-                {/* Profile Image */}
+            <div className="text-center lg:text-left animate-fade-in">
+              <div className="flex flex-col items-center lg:items-start">
+                {/* Profile Image with overlapping name */}
                 <div className="relative mb-8">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur opacity-75 animate-pulse"></div>
-                  <img 
-                    src="/lovable-uploads/237eebb4-ad5e-4493-b350-a063e7aa13d5.png" 
-                    alt="Leonardo Cabrera"
-                    className="relative w-56 h-56 rounded-2xl object-cover shadow-2xl border-4 border-white/20 animate-scale-in"
-                  />
+                  <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl blur opacity-75 animate-pulse"></div>
+                  <div className="relative">
+                    <img 
+                      src="/lovable-uploads/237eebb4-ad5e-4493-b350-a063e7aa13d5.png" 
+                      alt="Leonardo Cabrera"
+                      className="relative w-80 h-80 rounded-3xl object-cover shadow-2xl border-4 border-white/20 animate-scale-in"
+                    />
+                    
+                    {/* Name overlapping the image */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent rounded-b-3xl p-6">
+                      <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent leading-tight">
+                        LEONARDO<br />CABRERA
+                      </h1>
+                    </div>
+                  </div>
+                  
                   <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg">
                     <span className="text-2xl">👨‍🏫</span>
                   </div>
                 </div>
 
-                {/* Name and Title */}
+                {/* Title */}
                 <div className="space-y-4 mb-6">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent leading-tight">
-                    LEONARDO<br />CABRERA
-                  </h1>
-                  <div className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-full px-6 py-2 inline-block">
+                  <div className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-full px-6 py-3 inline-block">
                     <p className="text-lg font-semibold text-white">
                       MAESTRO ESPECIALIZADO
                     </p>
