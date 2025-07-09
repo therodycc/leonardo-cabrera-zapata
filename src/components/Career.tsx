@@ -44,7 +44,7 @@ const Career = () => {
   ];
 
   return (
-    <section id="career" className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
+    <section id="career" className="py-20 bg-gradient-to-br from-slate-50 to-gray-100 w-full">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
